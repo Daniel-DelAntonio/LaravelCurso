@@ -9,6 +9,6 @@ class SiteController extends Controller
         $name = 'Daniel';
         $habit = ['Ler,', 'Estudar', 'Programar', 'Desenhar'];
 
-        return view(view: 'home', data: compact('name', 'habit'));
+        return view(view: 'dashboard', data: compact('name', 'habit'));
     }
 }
