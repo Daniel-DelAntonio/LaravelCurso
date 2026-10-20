@@ -4,13 +4,22 @@
         {{ config('app.name') }}
     </div>
 
+    <div>
+    
     @auth
-        <a href="/logout" class="bg-white p-2 border-2">Logout</a>
+    <form action="{{ route('auth.logout') }}" method="POST">
+        @csrf
+        <button type="submit" class="bg-white p-2 border-2">
+            Logout
+        </button>
+
+    </form>
     @endauth
 
+
     @guest
-        <a href="/login" class="bg-white p-2 border-2">Login</a>
+        <a href="{{ route('site.login') }}" class="bg-white p-2 border-2">Login</a>
     @endguest
 
-
+    </div>
 </header>

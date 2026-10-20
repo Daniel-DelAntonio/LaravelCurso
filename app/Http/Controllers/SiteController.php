@@ -11,4 +11,9 @@ class SiteController extends Controller
 
         return view(view: 'dashboard', data: compact('name', 'habit'));
     }
+
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
 }
