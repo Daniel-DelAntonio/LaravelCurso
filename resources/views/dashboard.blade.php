@@ -1,13 +1,19 @@
 <x-layout>
     <main class="container mx-auto p-10">
     
-        <h1>Pagina Inicial</h1>
+        <h1 class="text-4xl font-bold text-center">
+            Pagina Inicial
+        </h1>
         
-        <p>
-            Bem-vindo de volta, {{ auth()->user()->name }}!
-        </p>
+        <a href="{{ route('habits.create') }}" class="p-2 border-2 bg-white hover:bg-gray-200 font-bold">
+            Cadastrar Hábito
+        </a>
 
-        <br>
+        @session('success')
+            <div class="bg-green-100 border-2 border-green-500 block max-w-[350px] text-green-800 rounded mb-4 p-4 mt-4 ">
+                {{ session('success') }}
+            </div>
+        @endsession
 
         <div class="">
             <h2 class="text-xl mt-4">
@@ -32,7 +38,7 @@
                 @endforelse
             </ul>
 
-            <a href="/habits/create" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 gap-2 mt-4 inline-block">
+            <a href="{{ route('habits.create') }}" class="bg-white text-black border-2 px-4 py-2 rounded hover:bg-gray-200 gap-2 mt-4 inline-block">
                 Adicionar Novo Hábito
             </a>
         </div>

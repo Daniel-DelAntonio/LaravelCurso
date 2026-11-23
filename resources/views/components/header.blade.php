@@ -9,7 +9,7 @@
     @auth
     <form action="{{ route('auth.logout') }}" method="POST">
         @csrf
-        <button type="submit" class="bg-white p-2 border-2">
+        <button type="submit" class="bg-white p-2 border-2 hover:bg-gray-200">
             Logout
         </button>
 
@@ -18,7 +18,7 @@
 
 
     @guest
-        <a href="{{ route('site.login') }}" class="bg-white p-2 border-2">Login</a>
+        <a href="{{ route('site.login') }}" class="bg-white p-2 border-2 hover:bg-gray-200">Login</a>
     @endguest
 
     </div>
