@@ -9,7 +9,7 @@
     @auth
     <form action="{{ route('auth.logout') }}" method="POST">
         @csrf
-        <button type="submit" class="bg-white p-2 border-2 hover:bg-gray-200">
+        <button type="submit" class="bg-white p-2 border-2 hover:bg-gray-200 cursor-pointer">
             Logout
         </button>
 
