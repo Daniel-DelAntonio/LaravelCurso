@@ -22,7 +22,7 @@
                 </div>
 
                 <button type="submit" class="bg-white p-2 border-2 hover:bg-gray-200 cursor-pointer">
-                    Cadastrar Hábito
+                    Atualizar Hábito
                 </button>
             </form>
             

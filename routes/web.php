@@ -23,12 +23,14 @@ Route::middleware('auth')->group(function () {
     Route::post('/logout', [LoginController::class, 'logout'])->name('auth.logout');
 
     // Dashboard
-    Route::get('/dashboard', [SiteController::class, 'dashboard'])->name('site.dashboard');
 
     // Habits
-    Route::get('/dashboard/habits/create', [HabitController::class, 'create'])->name('habits.create');
+    //Route::get('/dashboard', [SiteController::class, 'dashboard'])->name('site.dashboard');
+    /*Route::get('/dashboard/habits/create', [HabitController::class, 'create'])->name('habits.create');
     Route::post('/dashboard/habits', [HabitController::class, 'store'])->name('habits.store');
     Route::delete('/dashboard/habits/{habit}', [HabitController::class, 'destroy'])->name('habits.destroy');
     Route::get('/dashboard/habits/{habit}/edit', [HabitController::class, 'edit'])->name('habits.edit');
-    Route::put('/dashboard/habits/{habit}', [HabitController::class, 'update'])->name('habits.update');
+    Route::put('/dashboard/habits/{habit}', [HabitController::class, 'update'])->name('habits.update');*/
+
+    Route::resource('dashboard/habits', HabitController::class)->except(['show']);
 });
